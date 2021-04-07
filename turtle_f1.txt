@@ -1,0 +1,56 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbp: <https://dbpedia.org/property/> .
+@prefix dbpg: <https://dbpedia.org/page/> .
+@prefix dbr: <https://dbpedia.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix bsp: <https://bramantyoa.github.io/semantic-project/>
+
+bsp:season2020 a rdfs:Class ;
+    rdfs:subClassOf dbpg:2020_Formula_One_World_Championship .
+
+bsp:season2016 a rdfs:Class ;
+    rdfs:subClassOf dbpg:2016_Formula_One_World_Championship .
+
+bsp:season2013 a rdfs:Class ;
+    rdfs:subClassOf dbpg:2013_Formula_One_World_Championship .
+
+bsp:racerTotalGrandPrixInSeason a rdf:Property ;
+    rdfs:range xsd:integer ;
+    rdfs:domain bsp:season2013 ;
+    rdfs:domain bsp:season2016 ;
+    rdfs:domain bsp:season2020 .    
+
+bsp:racerTotalPointsInSeason a rdf:Property ;
+    rdfs:range xsd:integer ;
+    rdfs:domain bsp:season2013 ;
+    rdfs:domain bsp:season2016 ;
+    rdfs:domain bsp:season2020 .
+
+bsp:constructorPointsInSeason a rdf:Property ;
+    rdfs:range xsd:integer ;
+    rdfs:domain bsp:season2013 ;
+    rdfs:domain bsp:season2016 ;
+    rdfs:domain bsp:season2020 .
+
+bsp:2020 a bsp:season2020 ;
+    dbp:year 2020 ;
+    dbp:champions dbr:Lewis_Hamilton, dbr:Mercedes-Benz_in_Formula_One ;
+    bsp:racerTotalGrandPrixInSeason 17 ;
+    bsp:racerTotalPointsInSeason 374 ;
+    bsp:constructorPointsInSeason 573 .
+
+bsp:2016 a bsp:season2016 ;
+    dbp:year 2016 ;
+    dbp:champions dbr:Nico_Rosberg, dbr:Mercedes-Benz_in_Formula_One ;
+    bsp:racerTotalGrandPrixInSeason 19 ;
+    bsp:racerTotalPointsInSeason 385 ;
+    bsp:constructorPointsInSeason 765 .
+
+bsp:2013 a bsp:season2013 ;
+    dbp:year 2013 ;
+    dbp:champions dbr:Sebastian_Vettel, dbr:Red_Bull_Racing ;
+    bsp:racerTotalGrandPrixInSeason 19 ;
+    bsp:racerTotalPointsInSeason 397 ;
+    bsp:constructorPointsInSeason 596 .
