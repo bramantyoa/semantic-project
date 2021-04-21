@@ -1,0 +1,44 @@
+@prefix bsp: <https://bramantyoa.github.io/semantic-project/> .
+@prefix dbp: <https://dbpedia.org/property/> .
+@prefix dbo: <https://dbpedia.org/ontology/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+bsp:seasonShape a sh:NodeShape ;
+	sh:targetClass bsp:2020, bsp:2016, bsp:2013 ;
+	sh:property [
+		sh:path dbp:year ;
+        sh:datatype xsd:string ;
+    ] ;
+	sh:property bsp:championsShape ;
+	sh:property bsp:racerGpShape ;
+	sh:property bsp:racerPtsShape ;
+	sh:property bsp:constructorPtsShape .
+
+bsp:championsShape a sh:PropertyShape ;
+	sh:path bsp:champions ;
+	sh:minCount 2 ;
+	sh:maxCount 2 ;
+	sh:or (
+      [ sh:datatype dbo:FormulaOneRacer ]
+      [ sh:datatype dbo:Organization ]
+    ) .
+
+bsp:racerGpShape a sh:PropertyShape ;
+	sh:path bsp:racerTotalGrandPrixInSeason ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer .
+
+bsp:racerPtsShape a sh:PropertyShape ;
+	sh:path bsp:racerTotalPointsInSeason ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer .
+
+bsp:constructorPtsShape a sh:PropertyShape ;
+	sh:path bsp:constructorPointsInSeason ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer .
