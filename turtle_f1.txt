@@ -5,7 +5,7 @@
 @prefix dbr: <https://dbpedia.org/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix schema: <https://schema.org/> .
-@prefix bsp: <https://bramantyoa.github.io/semantic-project/>
+@prefix bsp: <https://bramantyoa.github.io/semantic-project/> .
 
 bsp:season2020 a rdfs:Class ;
     rdfs:subClassOf dbpg:2020_Formula_One_World_Championship .
