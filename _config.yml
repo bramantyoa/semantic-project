@@ -11,11 +11,3 @@ redcarpet:
       'superscript',
       'with_toc_data',
     ]
-include:
-  - _pages
-defaults:
-  - scope:
-      path: '_pages'
-      type: 'pages'
-    values:
-      permalink: /:basename/
