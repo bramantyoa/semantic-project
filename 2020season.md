@@ -1,4 +1,4 @@
-# 2020
+# 2020season
 
 | ----- | ----- |
 | is a | [bsp:season2020](https://bramantyoa.github.io/semantic-project/season2020) |
