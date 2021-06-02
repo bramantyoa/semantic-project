@@ -7,7 +7,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix bsp: <https://bramantyoa.github.io/semantic-project/> .
 
-bsp:f1season a rdfs:Class ;
+bsp:f1season a rdfs:Class .
 
 bsp:racerTotalGrandPrixInSeason a rdf:Property ;
     rdfs:range xsd:integer ;
